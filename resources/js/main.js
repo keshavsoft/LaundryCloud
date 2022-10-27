@@ -1,21 +1,24 @@
 // import { ToKCont1 } from "../Laundry/Booking/Today/Insert/Js/ShowinDOM";
-// import { ToHeaderFunc } from "../Laundry/Booking/Today/Js/InsertToDOM";
+import { ToHeaderFunc } from "../LaundryJs/Booking/Today/Js/InsertToDOM";
 
 // import { CheckFolderFunc } from "../Dal/test";
 // import { AddlistenersFunc } from "./KeshavSoft/ListenerFuncs";
+const CommonFolderName = "LaundryMan1";
 
 let jFShowInKLastRefreshDT = () => {
     let jVarLocalKLastRefreshDT = document.getElementById("KLastRefreshDT");
     jVarLocalKLastRefreshDT.innerHTML = new Date();
 };
 
-// let jFStart = async () => {
-//     await ToHeaderFunc();
-//     await ToKCont1();
-// };
+let jFStart = async () => {
+    let LocalFolderName = CommonFolderName;
 
-// jFStart().then(p => {
-// });
+    await ToHeaderFunc({ inFolderName: LocalFolderName });
+    // await ToKCont1();
+};
+
+jFStart().then(p => {
+});
 
 function askForApproval() {
     if (Notification.permission === "granted") {
