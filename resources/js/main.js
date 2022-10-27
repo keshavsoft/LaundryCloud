@@ -3,7 +3,7 @@ import { ToHeaderFunc } from "../LaundryJs/Booking/Today/Js/InsertToDOM";
 
 // import { CheckFolderFunc } from "../Dal/test";
 // import { AddlistenersFunc } from "./KeshavSoft/ListenerFuncs";
-const CommonFolderName = "LaundryMan1";
+const CommonFolderName = "LaundryMan";
 
 let jFShowInKLastRefreshDT = () => {
     let jVarLocalKLastRefreshDT = document.getElementById("KLastRefreshDT");
