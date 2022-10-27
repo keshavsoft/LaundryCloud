@@ -1,5 +1,5 @@
 // import { ToKCont1 } from "../Laundry/Booking/Today/Insert/Js/ShowinDOM";
-import { ToHeaderFunc } from "../LaundryJs/Booking/Today/Js/InsertToDOM";
+import { ToHeaderFunc as BookingTodayToHeaderFunc } from "../LaundryJs/Booking/Today/Js/InsertToDOM";
 
 // import { CheckFolderFunc } from "../Dal/test";
 // import { AddlistenersFunc } from "./KeshavSoft/ListenerFuncs";
@@ -13,7 +13,7 @@ let jFShowInKLastRefreshDT = () => {
 let jFStart = async () => {
     let LocalFolderName = CommonFolderName;
 
-    await ToHeaderFunc({ inFolderName: LocalFolderName });
+    await BookingTodayToHeaderFunc({ inFolderName: LocalFolderName });
     // await ToKCont1();
 };
 

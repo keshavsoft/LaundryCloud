@@ -1,4 +1,5 @@
 import { HeaderHtmlFunc } from "./HtmlFromTemplates";
+import { StartFunc as AddListenersStartFunc } from "./AddListeners";
 
 let ToHeaderFunc = async ({ inFolderName }) => {
     let LocalinFolderName = inFolderName;
@@ -7,7 +8,7 @@ let ToHeaderFunc = async ({ inFolderName }) => {
 
     let jVarLocalKCont1 = document.getElementById("KHeader");
     jVarLocalKCont1.innerHTML = jVarLocalFromHbs;
-    //  LocalAddListeners();
+    AddListenersStartFunc();
 };
 
 export { ToHeaderFunc };
