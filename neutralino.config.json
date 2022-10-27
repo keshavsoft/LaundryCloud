@@ -4,7 +4,7 @@
   "defaultMode": "browser",
   "port": 0,
   "documentRoot": "/resources/",
-  "url": "/Start.html",
+  "url": "/LaundryMan/Start.html",
   "enableServer": true,
   "enableNativeAPI": true,
   "tokenSecurity": "one-time",
