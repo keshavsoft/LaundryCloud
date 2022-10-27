@@ -1,19 +1,21 @@
-import { ToKCont1 } from "../Laundry/Booking/Today/Insert/Js/ShowinDOM";
-import { ToHeaderFunc } from "../Laundry/Booking/Today/Js/InsertToDOM";
-import { CheckFolderFunc } from "../Dal/test";
-import { StartFunc } from "../Dal/Bookings/PullFuncs/WithCompleted";
-import { ToDOMBodyFromPK } from "../Laundry/Booking/Today/FindBooking/Js/FindBooking";
-import { AddlistenersFunc } from "./KeshavSoft/ListenerFuncs";
+// import { ToKCont1 } from "../Laundry/Booking/Today/Insert/Js/ShowinDOM";
+// import { ToHeaderFunc } from "../Laundry/Booking/Today/Js/InsertToDOM";
+
+// import { CheckFolderFunc } from "../Dal/test";
+// import { AddlistenersFunc } from "./KeshavSoft/ListenerFuncs";
 
 let jFShowInKLastRefreshDT = () => {
     let jVarLocalKLastRefreshDT = document.getElementById("KLastRefreshDT");
     jVarLocalKLastRefreshDT.innerHTML = new Date();
 };
 
-let jFStart = async () => {
-    await ToHeaderFunc();
-    await ToKCont1();
-};
+// let jFStart = async () => {
+//     await ToHeaderFunc();
+//     await ToKCont1();
+// };
+
+// jFStart().then(p => {
+// });
 
 function askForApproval() {
     if (Notification.permission === "granted") {
@@ -39,28 +41,19 @@ function createNotification(title, text, icon) {
     });
 };
 
-AddlistenersFunc();
+//AddlistenersFunc();
 
 jFShowInKLastRefreshDT();
 
-CheckFolderFunc().then(FromPromise => {
-    if (FromPromise.KTF) {
+// CheckFolderFunc().then(FromPromise => {
+//     if (FromPromise.KTF === false) {
+//         askForApproval();
+//         let jVarLocalAlertDangerId = document.getElementById("AlertDangerId");
+//         jVarLocalAlertDangerId.innerHTML = FromPromise.KReason;
 
-        jFStart().then(p => {
-            // ToDOMBodyFromPK({ inBookingPK: 3 }).then(p => {
-
-            // })
-        });
-
-    } else {
-        askForApproval();
-        let jVarLocalAlertDangerId = document.getElementById("AlertDangerId");
-        jVarLocalAlertDangerId.innerHTML = FromPromise.KReason;
-
-        let jVarLocalShowOfflineSpinnerId = document.getElementById("ShowOfflineSpinnerId");
-        jVarLocalShowOfflineSpinnerId.classList.remove("d-none")
-
-    };
-});
+//         let jVarLocalShowOfflineSpinnerId = document.getElementById("ShowOfflineSpinnerId");
+//         jVarLocalShowOfflineSpinnerId.classList.remove("d-none")
+//     };
+// });
 
 // QrCodeData().then(p => { console.log(p); })

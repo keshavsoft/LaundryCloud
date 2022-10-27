@@ -49,5 +49,4 @@ let LocaljFHeaderSearchInputKeyPress = async (event) => {
     };
 };
 
-
 export { AddlistenersFunc }
