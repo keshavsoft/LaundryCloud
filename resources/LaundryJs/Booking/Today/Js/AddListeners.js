@@ -8,7 +8,8 @@ import { BuildBookingMenuFunc } from "../../../Booking/Js/TodayToHeaderDom";
 // import { QrcodeShowAll } from "../QrCode/Js/QrCode";
 // import { LastBookingFunc } from "../LastBooking/Js/LastBooking";
 // import { FindBookingFunc as FindBookingShowToDOM } from "../FindBooking/Js/FindBooking";
-// import { DashBoardShow as DashBoardShowToDOM } from "../DashBoard/Js/DashBordShow";
+
+import { DashBoardShow as DashBoardShowToDOM } from "../DashBoard/Js/DashBordShow";
 
 
 let StartFunc = () => {
@@ -36,8 +37,8 @@ let StartFunc = () => {
     // let jVarLocalFindBookingHeaderId = document.getElementById("FindBookingHeaderId");
     // jVarLocalFindBookingHeaderId.addEventListener("click", FindBookingShowToDOM);
 
-    // let jVarLocalDashBoardHeaderId = document.getElementById("DashBoardHeaderId");
-    // jVarLocalDashBoardHeaderId.addEventListener("click", DashBoardShowToDOM);
+    let jVarLocalDashBoardHeaderId = document.getElementById("DashBoardHeaderId");
+    jVarLocalDashBoardHeaderId.addEventListener("click", DashBoardShowToDOM);
 
 };
 
