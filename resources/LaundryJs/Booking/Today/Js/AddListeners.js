@@ -1,8 +1,7 @@
 import { BuildBookingMenuFunc } from "../../../Booking/Js/TodayToHeaderDom";
-
 import { ToKCont1 as InsertToKCont1 } from "../Insert/Js/ShowinDOM";
+import { ToKCont1 as ShowToKCont1 } from "../Show/Js/Show";
 
-// import { TodayShowFunc } from "../Today/Js/TodayShow";
 // import { ShowDataForDelete } from "../Delete/Js/ShowDataForDelete";
 // import { ShowDatawithAlertForDelete } from "../Delete/Js/ShowDatawithAlertForDelete";
 // import { ShowAll } from "../ShowAll/Js/ShowinDOMBody";
@@ -16,18 +15,16 @@ let StartFunc = () => {
     let jVarLocalHomeId = document.getElementById("BookingHomeId");
     jVarLocalHomeId.addEventListener("click", BuildBookingMenuFunc);
 
-    // let jVarLocalBookingHeaderTodayId = document.getElementById("BookingHeaderTodayId");
-    // jVarLocalBookingHeaderTodayId.addEventListener("click", TodayShowFunc);
+    let jVarLocalBookingHeaderInsertId = document.getElementById("BookingHeaderInsertId");
+    jVarLocalBookingHeaderInsertId.addEventListener("click", InsertToKCont1);
 
-    // let jVarLocalBookingHeaderDeleteId = document.getElementById("BookingHeaderDeleteId");
-    // jVarLocalBookingHeaderDeleteId.addEventListener("click", ShowDatawithAlertForDelete);
+    let jVarLocalBookingHeaderTodayId = document.getElementById("BookingHeaderShowId");
+    jVarLocalBookingHeaderTodayId.addEventListener("click", ShowToKCont1);
 
     // let jVarLocalBookingHeaderShowAllId = document.getElementById("BookingHeaderShowAllId");
     // jVarLocalBookingHeaderShowAllId.addEventListener("click", ShowAll);
 
-    let jVarLocalBookingHeaderInsertId = document.getElementById("BookingHeaderInsertId");
-    jVarLocalBookingHeaderInsertId.addEventListener("click", InsertToKCont1);
-
+    
     // let jVarLocalBookingHeaderQrCodeId = document.getElementById("BookingHeaderQrCodeId");
     // jVarLocalBookingHeaderQrCodeId.addEventListener("click", QrcodeShowAll);
 
