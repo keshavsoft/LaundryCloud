@@ -2,7 +2,7 @@ import { BuildBookingMenuFunc } from "../../../Booking/Js/TodayToHeaderDom";
 import { ToKCont1 as InsertToKCont1 } from "../Insert/Js/ShowinDOM";
 import { ToKCont1 as ShowToKCont1 } from "../Show/Js/Show";
 import { ToKCont1 as ShowAllToKCont1 } from "../ShowAll/Js/ShowinDOMBody";
-// import { QrcodeShowAll } from "../QrCode/Js/QrCode";
+import { ToKCont1 as QrcodeToKCont1 } from "../QrCode/Js/QrCodeShowInDOM";
 // import { LastBookingFunc } from "../LastBooking/Js/LastBooking";
 import { ToKCont1 as FindBookingShowToDOM } from "../FindBooking/Js/FindBooking";
 import { ToKCont1 as DashBordShowInsertToDOMBody } from "../DashBoard/Js/InsertToDOMBody";
@@ -21,8 +21,8 @@ let StartFunc = () => {
     jVarLocalBookingHeaderShowAllId.addEventListener("click", ShowAllToKCont1);
 
     
-    // let jVarLocalBookingHeaderQrCodeId = document.getElementById("BookingHeaderQrCodeId");
-    // jVarLocalBookingHeaderQrCodeId.addEventListener("click", QrcodeShowAll);
+    let jVarLocalBookingHeaderQrCodeId = document.getElementById("BookingHeaderQrCodeId");
+    jVarLocalBookingHeaderQrCodeId.addEventListener("click", QrcodeToKCont1);
 
     // let jVarLocalLastBookingHeaderId = document.getElementById("LastBookingHeaderId");
     // jVarLocalLastBookingHeaderId.addEventListener("click", LastBookingFunc);
