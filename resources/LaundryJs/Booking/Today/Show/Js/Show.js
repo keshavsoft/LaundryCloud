@@ -4,12 +4,14 @@ import { RowHtmlFunc } from "../Js/HtmlFuncs/FromHbs";
 import { ShowDalFunc } from "./DalFuncs";
 
 let ToKCont1 = async (inEvent) => {
+    console.log("show");
     if ((inEvent === undefined) === false) {
         let jVarLocalCurrentTarget = inEvent.currentTarget;
         ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
     };
 
     await TodayHtmlFunc();
+
     let jVarLocalDataNeeded = await ShowDalFunc();
     let jVarLocalFromHbs = await RowHtmlFunc();
 
@@ -30,4 +32,5 @@ let LocalSetFocusFunc = () => {
     let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
     jVarLocalCustomerName.focus();
 };
-export{ToKCont1};
+
+export { ToKCont1 };
