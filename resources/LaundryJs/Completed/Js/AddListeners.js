@@ -1,6 +1,6 @@
 import { BuildMenuFunc } from "../../Js/ShowinDOMHeader";
 import { ToKCont1 as CompletedShowFunc } from "../Show/Js/Show";
-import {ScanHeaderId } from "../Scan/Js/ScanFuncs";
+import { ScanHeaderId } from "../Scan/Js/ScanFuncs";
 
 let AddListenersFunc = () => {
     let jVarLocalHomeId = document.getElementById("HomeId");

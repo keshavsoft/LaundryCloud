@@ -5,4 +5,4 @@ let CompletedHtmlFunc = async () => {
     return await data;
 };
 
- export {CompletedHtmlFunc};
+export { CompletedHtmlFunc };

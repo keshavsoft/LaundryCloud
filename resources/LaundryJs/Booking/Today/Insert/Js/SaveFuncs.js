@@ -1,5 +1,5 @@
 import { BookingInsertSuccessFunc } from "./HtmlFuns/FromHbs";
-// import { ToModal } from "../../QrCode/Js/QrCodeToModal";
+import { ToModal } from "../../QrCode/Js/QrCodeToModal";
 import { StartFunc as PushFuncsStartFunc } from "../../../../../Dal/Bookings/PushFuncs/SaveFunc";
 
 let CommonGarmentDetailsKeyName = "GarmentDetails";

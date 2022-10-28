@@ -4,4 +4,4 @@ let ScanHtmlFunc = async () => {
     let data = await response.text();
     return await data;
 };
-export{ScanHtmlFunc};
+export { ScanHtmlFunc };

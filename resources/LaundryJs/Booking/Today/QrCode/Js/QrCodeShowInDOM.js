@@ -1,7 +1,8 @@
+import { QrCodeHtmlFunc } from "./HtmlFuncs/FromHbs";
+import { ShowAllFunc } from "../../ShowAll/Js/DalFuncs";
 import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
-import { TodayHtmlFunc } from "../../Show/Js/HtmlFuncs/FromTemplates";
-import { RowHtmlFunc } from "../Js/HtmlFuncs/FromHbs";
-import { ShowDalFunc } from "./DalFuncs";
+import { AddListenersFunc } from "./AddListeners";
+import { ShowAllFunc as DalStartFunc } from "./DalFuncs";
 
 let ToKCont1 = async (inEvent) => {
     if ((inEvent === undefined) === false) {
@@ -9,25 +10,28 @@ let ToKCont1 = async (inEvent) => {
         ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
     };
 
-    await TodayHtmlFunc();
-    let jVarLocalDataNeeded = await ShowDalFunc();
-    let jVarLocalFromHbs = await RowHtmlFunc();
+    let jVarLocalFromTemplate = await QrCodeHtmlFunc();
+    //   console.log("jVarLocalFromTemplate : ", jVarLocalFromTemplate);
+    var template = Handlebars.compile(jVarLocalFromTemplate);
+
+    let jVarLocalDataNeeded = await DalStartFunc();
 
     if (jVarLocalDataNeeded.KTF === false) {
 
     };
 
-    var template = Handlebars.compile(jVarLocalFromHbs);
     let jVarLocalHtml = template(jVarLocalDataNeeded.JsonData);
 
-    document.getElementById("KTableBody").innerHTML = jVarLocalHtml;
+    document.getElementById("KCont1").innerHTML = jVarLocalHtml;
+
+    AddListenersFunc();
 
     LocalSetFocusFunc();
 };
-
 
 let LocalSetFocusFunc = () => {
     let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
     jVarLocalCustomerName.focus();
 };
-export { ToKCont1 };
+
+export { ToKCont1 }

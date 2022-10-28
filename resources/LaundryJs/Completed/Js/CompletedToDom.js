@@ -11,6 +11,4 @@ let ToHeaderFunc = async () => {
     AddListenersFunc();
 };
 
-
-
 export { ToHeaderFunc };

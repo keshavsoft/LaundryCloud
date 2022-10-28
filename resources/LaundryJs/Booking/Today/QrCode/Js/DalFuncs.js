@@ -1,8 +1,9 @@
-import { ShowTodayFunc } from "../../../../../Dal/Bookings/Show";
-let ShowDalFunc = async () => {
+import { StartFunc } from "../../../../../Dal/Bookings/PullFuncs/WithQrCodes";
+
+let ShowAllFunc = async () => {
     let LocalReturnObject = { KTF: false, KResult: "", JsonData: {} };
 
-    let LocalDataFromJson = await ShowTodayFunc();
+    let LocalDataFromJson = await StartFunc();
     let LocalSNo = 1;
 
     Object.entries(LocalDataFromJson.JsonData).forEach(
@@ -16,7 +17,6 @@ let ShowDalFunc = async () => {
     LocalReturnObject.KTF = true;
 
     return await LocalReturnObject;
-
 };
 
-export { ShowDalFunc };
+export { ShowAllFunc }

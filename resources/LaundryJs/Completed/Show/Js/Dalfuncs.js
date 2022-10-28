@@ -8,7 +8,7 @@ let CompletedShowFunc = async () => {
     let LocalSNo = 1;
 
     LocalReturnObject.KReason = LocalDataFromJson.KReason;
-    
+
     Object.entries(LocalDataFromJson.JsonData).forEach(
         ([key, value]) => {
             LocalReturnObject.JsonData[key] = value;

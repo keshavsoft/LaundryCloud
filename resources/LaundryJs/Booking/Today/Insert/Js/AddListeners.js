@@ -1,11 +1,11 @@
-import {BookingSaveFunc } from "../Js/SaveFuncs";
+import { BookingSaveFunc } from "../Js/SaveFuncs";
 
 let AddListenersFunc = () => {
-        let jVarLocalBookingSaveButtonId = document.getElementById("BookingSaveButtonId");
-    
-        jVarLocalBookingSaveButtonId.addEventListener("click", async (event) => {
-            await BookingSaveFunc();
-        });
-    };
+    let jVarLocalBookingSaveButtonId = document.getElementById("BookingSaveButtonId");
 
-    export{AddListenersFunc};
+    jVarLocalBookingSaveButtonId.addEventListener("click", async (event) => {
+        await BookingSaveFunc();
+    });
+};
+
+export { AddListenersFunc };

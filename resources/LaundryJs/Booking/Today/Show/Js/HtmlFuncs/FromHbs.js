@@ -5,4 +5,4 @@ let RowHtmlFunc = async () => {
     return await data;
 
 };
-export{RowHtmlFunc};
+export { RowHtmlFunc };
