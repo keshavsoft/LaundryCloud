@@ -1,6 +1,7 @@
 import { BuildBookingMenuFunc } from "../../../Booking/Js/TodayToHeaderDom";
 
-// import { ToKCont1 } from "../Insert/Js/ShowinDOM";
+import { ToKCont1 as InsertToKCont1 } from "../Insert/Js/ShowinDOM";
+
 // import { TodayShowFunc } from "../Today/Js/TodayShow";
 // import { ShowDataForDelete } from "../Delete/Js/ShowDataForDelete";
 // import { ShowDatawithAlertForDelete } from "../Delete/Js/ShowDatawithAlertForDelete";
@@ -9,8 +10,7 @@ import { BuildBookingMenuFunc } from "../../../Booking/Js/TodayToHeaderDom";
 // import { LastBookingFunc } from "../LastBooking/Js/LastBooking";
 // import { FindBookingFunc as FindBookingShowToDOM } from "../FindBooking/Js/FindBooking";
 
-import { DashBoardShow as DashBoardShowToDOM } from "../DashBoard/Js/DashBordShow";
-
+import { ToKCont1 as DashBordShowInsertToDOMBody } from "../DashBoard/Js/InsertToDOMBody";
 
 let StartFunc = () => {
     let jVarLocalHomeId = document.getElementById("BookingHomeId");
@@ -25,8 +25,8 @@ let StartFunc = () => {
     // let jVarLocalBookingHeaderShowAllId = document.getElementById("BookingHeaderShowAllId");
     // jVarLocalBookingHeaderShowAllId.addEventListener("click", ShowAll);
 
-    // let jVarLocalBookingHeaderInsertId = document.getElementById("BookingHeaderInsertId");
-    // jVarLocalBookingHeaderInsertId.addEventListener("click", ToKCont1);
+    let jVarLocalBookingHeaderInsertId = document.getElementById("BookingHeaderInsertId");
+    jVarLocalBookingHeaderInsertId.addEventListener("click", InsertToKCont1);
 
     // let jVarLocalBookingHeaderQrCodeId = document.getElementById("BookingHeaderQrCodeId");
     // jVarLocalBookingHeaderQrCodeId.addEventListener("click", QrcodeShowAll);
@@ -38,7 +38,7 @@ let StartFunc = () => {
     // jVarLocalFindBookingHeaderId.addEventListener("click", FindBookingShowToDOM);
 
     let jVarLocalDashBoardHeaderId = document.getElementById("DashBoardHeaderId");
-    jVarLocalDashBoardHeaderId.addEventListener("click", DashBoardShowToDOM);
+    jVarLocalDashBoardHeaderId.addEventListener("click", DashBordShowInsertToDOMBody);
 
 };
 

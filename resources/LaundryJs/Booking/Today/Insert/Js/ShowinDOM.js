@@ -1,22 +1,24 @@
-import { InsertHtmlFunc } from "./HtmlFuns/FromTemplates";
-import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
+import { InsertHtmlFromFile } from "./HtmlFuns/FromTemplates";
+//import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
 // import { BookingSaveFunc } from "../Js/SaveFuncs";
 // import { BookingClear } from "../Js/ClearFunc";
 
 let ToKCont1 = async (inEvent) => {
     console.log("kkkkkkkkkkkknnnnnnnnnnnnnn");
-    if ((inEvent === undefined) === false) {
-        let jVarLocalCurrentTarget = inEvent.currentTarget;
-        ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
-    };
+    // if ((inEvent === undefined) === false) {
+    //     let jVarLocalCurrentTarget = inEvent.currentTarget;
+    //     ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
+    // };
 
-    let jVarLocalFromHbs = await InsertHtmlFunc();
+    let jVarLocalFromHbs = await InsertHtmlFromFile();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
     jVarLocalKCont1.innerHTML = jVarLocalFromHbs;
 
-    LocalFuncAddListeners();
-    LocalSetFocusFunc();
+    // LocalFuncAddListeners();
+
+    // LocalSetFocusFunc();
+
 };
 
 // let LocalSetFocusFunc = () => {

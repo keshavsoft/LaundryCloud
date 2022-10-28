@@ -5,7 +5,7 @@ import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
 // import { AddlistenersFunc } from "./ListenerFuncs";
 // import { ToDOMBodyFromPK as FindBookingToDOMBodyFromPK } from "../../FindBooking/Js/FindBooking";
 
-let StartFunc = async (inEvent) => {
+let ToKCont1 = async (inEvent) => {
     if ((inEvent === undefined) === false) {
         let jVarLocalCurrentTarget = inEvent.currentTarget;
         ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
@@ -60,4 +60,4 @@ let LocalSetFocusFunc = () => {
     jVarLocalCustomerName.focus();
 };
 
-export { StartFunc }
+export { ToKCont1 }

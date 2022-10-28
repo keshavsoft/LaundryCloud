@@ -1,4 +1,4 @@
-import { ToKCont1 } from "../Laundryjs/Booking/Today/Insert/Js/ShowinDOM";
+import { ToKCont1 } from "../LaundryJs/Booking/Today/Insert/Js/ShowinDOM";
 import { ToHeaderFunc as BookingTodayToHeaderFunc } from "../LaundryJs/Booking/Today/Js/InsertToDOM";
 
 // import { CheckFolderFunc } from "../Dal/test";
