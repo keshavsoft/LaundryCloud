@@ -3,7 +3,7 @@ import { StartFunc as FuncsForPkStartFunc } from "../FuncsForPk/Start";
 import { StartFunc as QrCodesStartFunc } from "../../QrCodes/PullFuncs/WithBookingData";
 import { StartFunc as CompletedStartFunc } from "../../Completed/PullFuncs/Original";
 
-import _ from "../../../js/lodash";
+import _ from "../../../LaundryMan/js/lodash";
 
 let FromPk = async ({ inRowPK }) => {
     let LocalJsonFileName = "Bookings.json";
