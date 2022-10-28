@@ -1,21 +1,21 @@
 import { InsertHtmlFromFile } from "./HtmlFuns/FromTemplates";
-//import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
-// import { BookingSaveFunc } from "../Js/SaveFuncs";
+import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
+import { AddListenersFunc } from "./AddListeners";
+
 // import { BookingClear } from "../Js/ClearFunc";
 
 let ToKCont1 = async (inEvent) => {
-    console.log("kkkkkkkkkkkknnnnnnnnnnnnnn");
-    // if ((inEvent === undefined) === false) {
-    //     let jVarLocalCurrentTarget = inEvent.currentTarget;
-    //     ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
-    // };
+    if ((inEvent === undefined) === false) {
+        let jVarLocalCurrentTarget = inEvent.currentTarget;
+        ChangeClassFunc({ inHtmlControl: jVarLocalCurrentTarget });
+    };
 
     let jVarLocalFromHbs = await InsertHtmlFromFile();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
     jVarLocalKCont1.innerHTML = jVarLocalFromHbs;
 
-    // LocalFuncAddListeners();
+    AddListenersFunc();
 
     // LocalSetFocusFunc();
 
@@ -24,16 +24,6 @@ let ToKCont1 = async (inEvent) => {
 // let LocalSetFocusFunc = () => {
 //     let jVarLocalCustomerName = document.getElementById("CustomerName");
 //     jVarLocalCustomerName.focus();
-// };
-
-// let LocalFuncAddListeners = () => {
-//     let jVarLocalBookingSaveButtonId = document.getElementById("BookingSaveButtonId");
-
-//     jVarLocalBookingSaveButtonId.addEventListener("click", async (event) => {
-//         await BookingSaveFunc();
-//     });
-//     // jVarLocalBookingSaveButtonId.addEventListener("click", BookingClear );
-
 // };
 
 export { ToKCont1 };
