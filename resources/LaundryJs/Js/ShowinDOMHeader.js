@@ -1,8 +1,8 @@
 import { HeaderHtmlFunc } from "./HtmlFuncs/FromTemplates";
+import { AddListenerFunc } from "./AddListeners";
 
 // import { TodayHeaderFunc as BookingTodayToDOMHeader } from "../Booking/Js/TodayToDOM";
 // import { CompletedHeaderFunc } from "../Completed/Js/CompletedToDom";
-// import { CompletedShow } from "../Completed/Show/Js/Show";
 // import { BillingHeaderFunc } from "../Billing/Js/BillingToDOM";
 // import { BillingShow } from "../Billing/Show/Js/BillingShowFunc";
 // import { QrCodeShowHeaderFunc } from "../QrCode/Js/QrCodeToDOM";
@@ -18,58 +18,7 @@ let BuildMenuFunc = async () => {
     let jVarLocalKCont1 = document.getElementById("KCont1");
     jVarLocalKCont1.innerHTML = "";
 
- //   LocalFuncAddListener();
+ AddListenerFunc();
 };
 
-// let BuildMenuWithHeaderOnlyFunc = async () => {
-//     let jVarLocalFromHbs = await HeaderHtmlFunc();
-
-//     let jVarLocalKHeader = document.getElementById("KHeader");
-//     jVarLocalKHeader.innerHTML = jVarLocalFromHbs;
-
-//     LocalFuncAddListener();
-// };
-
-// let LocalFuncAddListener = () => {
-//     let jVarLocalBookingId = document.getElementById("BookingId");
-//     let jVarLocalWashingCompletedId = document.getElementById("WashingCompletedId");
-//     let jVarLocalBillingId = document.getElementById("BillingId");
-//     let jVarLocalQrcodeshowId = document.getElementById("QrcodeshowId");
-//     let jVarLocalMastersId = document.getElementById("MastersId");
-
-//     jVarLocalBookingId.addEventListener("click", LocalFuncBooking);
-    
-//     jVarLocalWashingCompletedId.addEventListener("click", LocalFuncCompleted);
-
-//     jVarLocalBillingId.addEventListener("click", LocalFuncBilling);
-
-//     jVarLocalQrcodeshowId.addEventListener("click", LocalFuncQrCode);
-
-//     jVarLocalMastersId.addEventListener("click", LocalFuncMasters);
-
-// };
-
-// let LocalFuncBooking = async () => {
-//     BookingTodayToDOMHeader();
-// };
-
-// let LocalFuncMasters = async () => {
-//     MastersToDOMHeader();
-// };
-
-// let LocalFuncCompleted = async () => {
-//     CompletedHeaderFunc();
-//     CompletedShow();
-// };
-
-// let LocalFuncBilling = async () => {
-//     BillingHeaderFunc();
-//     BillingShow();
-// };
-
-// let LocalFuncQrCode = async () => {
-//     QrCodeShowHeaderFunc();
-//     QrcodeShow();
-// };
-
-export { BuildMenuFunc }
+export { BuildMenuFunc };
