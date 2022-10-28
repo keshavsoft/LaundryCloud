@@ -1,5 +1,5 @@
 import { ToDOMBodyAsParts } from "../../FindBooking/Js/FindBooking";
-import { ToModal as BillingToModal } from "../../../../Billing/Print/Js/BillToModal";
+// import { ToModal as BillingToModal } from "../../../../Billing/Print/Js/BillToModal";
 
 let AddlistenersFunc = () => {
     let jVarLocalTableButtons = document.querySelectorAll(".OrderButtonClass");
@@ -21,10 +21,10 @@ let LocalTableButtonFunc = async (event) => {
     await ToDOMBodyAsParts({ inBookingPK: jVarLocalCurrentTarget.dataset.orderno });
 };
 
-let LocalTableBillButtonFunc = async (event) => {
-    let jVarLocalCurrentTarget = event.currentTarget;
-    console.log("lllllllllllllll", jVarLocalCurrentTarget.dataset);
-    await BillingToModal({ inBookingPK: jVarLocalCurrentTarget.dataset.billno });
-};
+// let LocalTableBillButtonFunc = async (event) => {
+//     let jVarLocalCurrentTarget = event.currentTarget;
+//     console.log("lllllllllllllll", jVarLocalCurrentTarget.dataset);
+//     await BillingToModal({ inBookingPK: jVarLocalCurrentTarget.dataset.billno });
+// };
 
 export { AddlistenersFunc }

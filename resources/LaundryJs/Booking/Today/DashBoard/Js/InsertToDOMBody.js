@@ -2,7 +2,7 @@ import { DashBoardHtmlFunc } from "./HtmlFuncs/FromHbs";
 import { ShowAll as DalShowAll } from "./Dalfuncs";
 import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
 
-// import { AddlistenersFunc } from "./ListenerFuncs";
+import { AddlistenersFunc } from "./ListenerFuncs";
 // import { ToDOMBodyFromPK as FindBookingToDOMBodyFromPK } from "../../FindBooking/Js/FindBooking";
 
 let ToKCont1 = async (inEvent) => {
@@ -27,7 +27,7 @@ let ToKCont1 = async (inEvent) => {
 
     document.getElementById("KCont1").innerHTML = jVarLocalHtml;
 
-    // AddlistenersFunc();
+    AddlistenersFunc();
     // LocalSetFocusFunc();
 };
 
